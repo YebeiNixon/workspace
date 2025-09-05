@@ -21,7 +21,7 @@ export default function TrialModal({ isOpen, onClose }: TrialModalProps) {
         
         <div className="space-y-6">
           <p className="text-center text-gray-600">
-            Get full access to PeakBooks for 30 days. No credit card required.
+            Get full access to PeakBooks for 7 days. No credit card required.
           </p>
           
           <div className="space-y-4">
