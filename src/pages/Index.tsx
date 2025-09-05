@@ -12,7 +12,6 @@ export default function Index() {
       <Hero />
       <Features />
       <Pricing />
-      <Reviews />
       <Footer />
     </div>
   );
