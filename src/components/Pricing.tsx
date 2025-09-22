@@ -1,56 +1,56 @@
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Check, Star } from 'lucide-react';
+import TrialModal from './TrialModal';
+import { useState } from 'react';
 
 const plans = [
+  //{
+    // name: 'Starter Plan',
+    // price: 'KES 1,000',
+    // period: '/month',
+    // description: 'Perfect for small businesses getting started',
+    // features: [
+    //   'Up to 6 Users',
+    //   'Core accounting (invoices, expenses, customers, suppliers)',
+    //   'Basic reports (P&L, Balance Sheet)',
+    //   'Bank reconciliation',
+    //   'eWallet integration',
+    //   'Audit trail'
+    // ],
+    // popular: false,
+    // buttonText: 'Start Free Trial',
+    // buttonVariant: 'outline' as const
+  //},
   {
-    name: 'Starter Plan',
-    price: 'KES 1,000',
-    period: '/month',
-    description: 'Perfect for small businesses getting started',
-    features: [
-      'Up to 6 Users',
-      'Core accounting (invoices, expenses, customers, suppliers)',
-      'Basic reports (P&L, Balance Sheet)',
-      'Bank reconciliation',
-      'eWallet integration',
-      'Audit trail'
-    ],
-    popular: false,
-    buttonText: 'Start Free Trial',
-    buttonVariant: 'outline' as const
-  },
-  {
-    name: 'Growth Plan',
+    name: 'The Plan',
     price: 'KES 1,500',
     period: '/month',
-    description: 'Ideal for growing businesses',
-    features: [
-      'Up to 10 Users',
-      'Everything in Starter +',
-      'Bank reconciliation with AI',
-      'Multi currency',
-      'VAT Centre & tax reporting',
-      'AI-powered business intelligence',
-      'Advanced reports'
-    ],
-    popular: true,
-    buttonText: 'Start Free Trial',
-    buttonVariant: 'default' as const
-  },
-  {
-    name: 'Premium Plan',
-    price: 'KES 2,500',
-    period: '/month',
-    description: 'For established businesses with advanced needs',
+    description: 'Ideal for your businesses',
     features: [
       'Unlimited Users',
       'Everything in Growth +',
       'M-Pesa integration hub with API access',
       'Payroll',
       'Multi Branch Support',
-      'Inventory management',
-      'Premium Support'
+      'Inventory management'
+    ],
+    popular: true,
+    buttonText: 'Start Free Trial',
+    buttonVariant: 'default' as const
+  },
+  {
+    name: 'Pay-As-You-Go Plan',
+    price: 'KES 500',
+    period: '/week',
+    description: 'A flexible Pay-As-You-Go plan tailored to your business needs.',
+    features: [
+      'Unlimited Users',
+      'Everything in Growth +',
+      'M-Pesa integration hub with API access',
+      'Payroll',
+      'Multi Branch Support',
+      'Inventory management'
     ],
     popular: false,
     buttonText: 'Start Free Trial',
@@ -59,13 +59,14 @@ const plans = [
 ];
 
 export default function Pricing() {
+  const [isTrialModalOpen, setIsTrialModalOpen] = useState(false);
   return (
     <section id="pricing" className="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
       <div className="container mx-auto px-6">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-6">
-            Simple, Transparent
-            <span className="block bg-gradient-to-r from-blue-600 to-indigo-600 bg-clip-text text-transparent">
+            Simple, Transparent{' '}
+            <span className="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
               Pricing
             </span>
           </h2>
@@ -74,7 +75,7 @@ export default function Pricing() {
           </p>
         </div>
         
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           {plans.map((plan, index) => (
             <Card 
               key={index} 
@@ -97,7 +98,7 @@ export default function Pricing() {
                 <h3 className="text-2xl font-bold text-gray-900 mb-2">{plan.name}</h3>
                 <p className="text-gray-600 mb-4">{plan.description}</p>
                 <div className="flex items-baseline justify-center">
-                  <span className="text-5xl font-bold text-gray-900">{plan.price}</span>
+                  <span className="text-4xl font-bold text-gray-900">{plan.price}</span>
                   <span className="text-gray-600 ml-1">{plan.period}</span>
                 </div>
               </CardHeader>
@@ -113,6 +114,7 @@ export default function Pricing() {
                 </ul>
                 
                 <Button 
+                onClick={() => setIsTrialModalOpen(true)}
                   variant={plan.buttonVariant}
                   className={`w-full py-3 ${
                     plan.popular 
@@ -122,12 +124,16 @@ export default function Pricing() {
                   size="lg"
                 >
                   {plan.buttonText}
+                  
                 </Button>
               </CardContent>
             </Card>
           ))}
         </div>
-        
+        <TrialModal 
+                isOpen={isTrialModalOpen} 
+                onClose={() => setIsTrialModalOpen(false)} 
+              />
         <div className="text-center mt-12">
           <p className="text-gray-600">
           </p>

@@ -5,11 +5,11 @@ export default function PrivacyPolicy() {
   return (
     <div className="min-h-screen">
       <Header />
-      <div className="bg-gray-50">
-        <div className="container mx-auto px-6 py-16">
-          <div className="max-w-4xl mx-auto">
-            <h1 className="text-4xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-8">Privacy Policy</h1>
-            <div className="bg-white rounded-lg shadow-sm p-8 space-y-6">
+      <div className="bg-gray-50 min-h-screen">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="max-w-4xl mx-auto pt-8 sm:pt-12">
+            <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-600 via-indigo-600 to-purple-600 bg-clip-text text-transparent mb-8">Privacy Policy</h1>
+            <div className="bg-white rounded-lg shadow-sm p-4 sm:p-6 lg:p-8 space-y-6">
               <div>
                 <p className="text-gray-600 mb-6"><strong>Effective Date:</strong> {new Date().toLocaleDateString()}</p>
                 
