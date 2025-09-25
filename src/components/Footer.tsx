@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin, X } from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin, X, MessageCircle} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -32,6 +32,14 @@ export default function Footer() {
                 <a href="https://x.com/PeakBooksAfrica" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">
                   <X className="w-5 h-5" />
                 </a>
+                <a
+                    href="https://wa.me/254736105920?text=Hello%20I%20am%20interested%20in%20your%20services"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-green-500 transition-colors"
+                  >
+                    <MessageCircle className="w-5 h-5" />
+                  </a>
               </div>
           </div>
 
