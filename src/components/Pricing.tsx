@@ -23,7 +23,7 @@ const plans = [
     // buttonVariant: 'outline' as const
   //},
   {
-    name: 'The Plan',
+    name: 'Peak Plan',
     price: 'KES 1,500',
     period: '/month',
     description: 'Ideal for your businesses',

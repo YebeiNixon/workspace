@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
-import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin, X, MessageCircle} from 'lucide-react';
+import { Facebook, Twitter, Linkedin, Mail, Phone, MapPin, X, MessageCircle, MessageCircleXIcon, MessageCircleCodeIcon, MessageCircleIcon, MessageCircleHeart, LucideMessageCircle, PhoneCallIcon, LucidePhoneCall} from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 export default function Footer() {
@@ -33,7 +33,7 @@ export default function Footer() {
                   <X className="w-5 h-5" />
                 </a>
                 <a
-                    href="https://wa.me/254736105920?text=Hello%20I%20am%20interested%20in%20your%20services"
+                    href="https://wa.me/254720506138?text=Hello%20I%20am%20interested%20in%20your%20plan"
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-gray-400 hover:text-green-500 transition-colors"
@@ -75,7 +75,7 @@ export default function Footer() {
 
         {/* Contact Info */}
         <div className="border-t border-gray-800 mt-12 pt-8">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
             <div className="flex items-center space-x-3">
               <Mail className="h-5 w-5 text-blue-500" />
               <span className="text-gray-400">support@peakbooks.app</span>
@@ -83,6 +83,17 @@ export default function Footer() {
             <div className="flex items-center space-x-3">
               <Phone className="h-5 w-5 text-blue-500" />
               <span className="text-gray-400">+254-720-506138</span>
+            </div>
+            <div className="flex items-center space-x-3">
+              <a
+                    href="https://wa.me/254720506138?text=Hello%20I%20am%20interested%20in%20your%20plan"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-400 hover:text-green-500 transition-colors"
+                  >
+                    <MessageCircle className="w-5 h-5"/>
+                  </a>
+                  <span className="text-green-400">WhatsApp</span>
             </div>
             <div className="flex items-center space-x-3">
               <MapPin className="h-5 w-5 text-blue-500" />
