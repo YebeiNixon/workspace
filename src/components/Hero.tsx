@@ -75,7 +75,7 @@ export default function Hero() {
               {/* Dashboard mockup with enhanced effects */}
               <div className="relative bg-white/95 backdrop-blur-sm rounded-3xl shadow-2xl border border-white/50 p-4 sm:p-8 hover:shadow-3xl transition-all duration-700 hover:scale-[1.02] group">
                 <img 
-                  src="https://mocha-cdn.com/0199285a-00c1-7cdf-923b-525202e77fcf/dashborad.jpeg"
+                  src="/images/dasboard.jpeg" 
                   alt="PeakBooks Dashboard Preview"
                   className="w-full h-auto rounded-2xl shadow-lg group-hover:shadow-2xl transition-shadow duration-500"
                   loading="eager"
