@@ -28,7 +28,7 @@ const plans = [
     period: '/month',
     description: 'Ideal for your businesses',
     features: [
-          'Unlimited Users',
+'Unlimited Users',
 'Core Accounting (invoices, expenses, customers, suppliers)',
 'Basic Reports (P&L, Balance Sheet)',
 'Bank Reconciliation',
@@ -53,7 +53,7 @@ const plans = [
     period: '/week',
     description: 'A flexible Pay-As-You-Go plan tailored to your business needs.',
     features: [
-      'Unlimited Users',
+'Unlimited Users',
 'Core Accounting (invoices, expenses, customers, suppliers)',
 'Basic Reports (P&L, Balance Sheet)',
 'Bank Reconciliation',

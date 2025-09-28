@@ -14,7 +14,8 @@ export default function Footer() {
               <img 
                 src="/images/plogo.png" 
                 alt="PeakBooks Logo" 
-                className="w-8 h-8 object-contain"
+                className="w-8 h-8 group-hover:rotate-12 transition-transform duration-300"
+
               />
               <span className="text-xl font-bold">PeakBooks</span>
             </div>

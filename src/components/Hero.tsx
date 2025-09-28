@@ -122,10 +122,10 @@ export default function Hero() {
                 controls
                 autoPlay
                 muted
-                poster="https://mocha-cdn.com/0199285a-00c1-7cdf-923b-525202e77fcf/dashborad.jpeg"
+                poster="/images/dasboard.jpeg" 
               >
                 <source
-                  src="https://sample-videos.com/zip/10/mp4/SampleVideo_1280x720_1mb.mp4"
+                  src="/images/dasboard.jpeg" 
                   type="video/mp4"
                 />
                 <p className="text-white p-8 text-center">
